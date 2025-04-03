@@ -1,0 +1,423 @@
+/* 
+ * نظام تحليل المناقصات - الأنماط الموحدة
+ * Tender Analysis System - Unified Styles
+ */
+
+/* الألوان الأساسية */
+:root {
+    --primary-color: #1e88e5;
+    --secondary-color: #26a69a;
+    --accent-color: #ff9800;
+    --background-color: #f5f5f5;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --text-light-color: #757575;
+    --border-color: #e0e0e0;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --error-color: #f44336;
+    --info-color: #2196f3;
+}
+
+/* تنسيق الخط والاتجاه */
+body {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    direction: rtl;
+    text-align: right;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* العناوين */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* البطاقات */
+.card {
+    background-color: var(--card-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+/* الأزرار */
+.stButton > button {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    background-color: #1976d2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-button > button {
+    background-color: var(--secondary-color);
+}
+
+.secondary-button > button:hover {
+    background-color: #00897b;
+}
+
+.accent-button > button {
+    background-color: var(--accent-color);
+}
+
+.accent-button > button:hover {
+    background-color: #fb8c00;
+}
+
+.danger-button > button {
+    background-color: var(--error-color);
+}
+
+.danger-button > button:hover {
+    background-color: #e53935;
+}
+
+/* حقول الإدخال */
+.stTextInput > div > div > input {
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.2);
+}
+
+/* القوائم المنسدلة */
+.stSelectbox > div > div > div {
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.stSelectbox > div > div > div:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.2);
+}
+
+/* الجداول */
+.stDataFrame {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stDataFrame > div {
+    border: none !important;
+}
+
+.stDataFrame th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+}
+
+.stDataFrame td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stDataFrame tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* الشريط الجانبي */
+.sidebar .sidebar-content {
+    background-color: #263238;
+    color: white;
+}
+
+.sidebar .sidebar-content h1, 
+.sidebar .sidebar-content h2, 
+.sidebar .sidebar-content h3 {
+    color: white;
+}
+
+.sidebar .sidebar-content .stRadio > div {
+    background-color: #37474f;
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.sidebar .sidebar-content .stRadio > div > div > label {
+    color: white;
+}
+
+/* علامات التبويب */
+.stTabs {
+    background-color: var(--card-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.stTabs > div > div > div > div {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    font-weight: 600;
+}
+
+.stTabs > div > div > div > div[data-baseweb="tab-highlight"] {
+    background-color: var(--primary-color);
+}
+
+/* الرسائل */
+.stSuccess, .stInfo, .stWarning, .stError {
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stSuccess {
+    background-color: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid var(--success-color);
+}
+
+.stInfo {
+    background-color: rgba(33, 150, 243, 0.1);
+    border-left: 4px solid var(--info-color);
+}
+
+.stWarning {
+    background-color: rgba(255, 152, 0, 0.1);
+    border-left: 4px solid var(--warning-color);
+}
+
+.stError {
+    background-color: rgba(244, 67, 54, 0.1);
+    border-left: 4px solid var(--error-color);
+}
+
+/* الرسوم البيانية */
+.stPlotlyChart {
+    background-color: var(--card-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* تخصيص للغة العربية */
+[dir="rtl"] .stPlotlyChart {
+    direction: ltr;
+}
+
+/* الشعار */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo-container img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* تنسيق الصفوف والأعمدة */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+}
+
+.col {
+    flex: 1 0 0%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+}
+
+/* تنسيق البطاقات الإحصائية */
+.stat-card {
+    background-color: var(--card-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.stat-card-primary {
+    border-top: 4px solid var(--primary-color);
+}
+
+.stat-card-secondary {
+    border-top: 4px solid var(--secondary-color);
+}
+
+.stat-card-accent {
+    border-top: 4px solid var(--accent-color);
+}
+
+.stat-card-success {
+    border-top: 4px solid var(--success-color);
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-light-color);
+}
+
+/* تنسيق النماذج */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+/* تنسيق الشاشة الرئيسية */
+.welcome-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.welcome-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.welcome-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light-color);
+    margin-bottom: 2rem;
+}
+
+/* تنسيق القائمة الرئيسية */
+.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.menu-item {
+    background-color: var(--card-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.menu-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* تنسيق الشاشة الترحيبية */
+.features-section {
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background-color: var(--card-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-left: 1.5rem;
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.feature-description {
+    color: var(--text-light-color);
+}
+
+/* تنسيق الشاشة الترحيبية */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-light-color);
+}
